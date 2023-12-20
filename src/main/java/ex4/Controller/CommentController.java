@@ -6,20 +6,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import ex4.Model.User;
-import ex4.Service.UserService;
+import ex4.Model.Comment;
+import ex4.Service.CommentService;
 
 import org.springframework.web.bind.annotation.GetMapping;
 
 @RestController
-@RequestMapping("/user")
-public class UserController {
+@RequestMapping("/comment")
+public class CommentController {
 	@Autowired
-	UserService userService;
+	CommentService commentService;
 
 	@GetMapping("")
-	public List<User> getAllUser() {
-		return this.userService.getAllUser();
+	public List<Comment> getAllUser() {
+		return this.commentService.getAllComment();
 	}
 
 }

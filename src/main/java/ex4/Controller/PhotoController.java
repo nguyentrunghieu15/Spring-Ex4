@@ -6,20 +6,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import ex4.Model.User;
-import ex4.Service.UserService;
-
+import ex4.Model.Photo;
+import ex4.Service.PhotoService;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @RestController
-@RequestMapping("/user")
-public class UserController {
+@RequestMapping("/photo")
+public class PhotoController {
 	@Autowired
-	UserService userService;
+	PhotoService photoService;
 
 	@GetMapping("")
-	public List<User> getAllUser() {
-		return this.userService.getAllUser();
+	public List<Photo> getAllPhoto() {
+		return this.photoService.getAllPhoto();
 	}
 
 }

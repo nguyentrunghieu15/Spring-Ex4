@@ -6,20 +6,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import ex4.Model.User;
-import ex4.Service.UserService;
+import ex4.Model.Todo;
+import ex4.Service.TodoService;
 
 import org.springframework.web.bind.annotation.GetMapping;
 
 @RestController
-@RequestMapping("/user")
-public class UserController {
+@RequestMapping("/todo")
+public class TodoController {
 	@Autowired
-	UserService userService;
+	TodoService todoService;
 
 	@GetMapping("")
-	public List<User> getAllUser() {
-		return this.userService.getAllUser();
+	public List<Todo> getAllTodo() {
+		return this.todoService.getAllTodo();
 	}
 
 }

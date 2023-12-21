@@ -6,20 +6,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import ex4.Model.User;
-import ex4.Service.UserService;
+import ex4.Model.Album;
+import ex4.Service.AlbumService;
 
 import org.springframework.web.bind.annotation.GetMapping;
 
 @RestController
-@RequestMapping("/user")
-public class UserController {
+@RequestMapping("/album")
+public class AlbumController {
 	@Autowired
-	UserService userService;
+	AlbumService albumService;
 
 	@GetMapping("")
-	public List<User> getAllUser() {
-		return this.userService.getAllUser();
+	public List<Album> getAllAlbum() {
+		return this.albumService.getAllAlbum();
 	}
 
 }

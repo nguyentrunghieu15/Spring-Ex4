@@ -1,7 +1,7 @@
 server:
   port : 14567
-    servlet :
-    	contextPath : /api/v1
+  servlet :
+    contextPath : /api/v1
 spring:
   datasource:
     username : test

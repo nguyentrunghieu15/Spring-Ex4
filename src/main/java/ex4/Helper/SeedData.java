@@ -243,7 +243,7 @@ public class SeedData {
 					System.out.println("Unsupported operating system: " + os);
 					return;
 				}
-
+				System.out.println(command);
 				// Run the command
 				ProcessBuilder processBuilder = new ProcessBuilder(command.split("%"));
 				processBuilder.redirectErrorStream(true);
@@ -262,7 +262,7 @@ public class SeedData {
 			} catch (IOException | InterruptedException e) {
 				e.printStackTrace();
 			}
-			Files.delete(temp);
+//			Files.delete(temp);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

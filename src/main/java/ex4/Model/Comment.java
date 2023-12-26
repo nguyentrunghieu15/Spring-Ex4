@@ -2,7 +2,6 @@ package ex4.Model;
 
 import java.io.Serializable;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Column;
@@ -21,6 +20,8 @@ import lombok.ToString;
 @Entity
 @Table(name = "comment")
 public class Comment implements Serializable {
+	private static final long serialVersionUID = 7692367406092971866L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;

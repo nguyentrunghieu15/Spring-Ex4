@@ -7,7 +7,6 @@ import org.apache.commons.lang3.builder.HashCodeExclude;
 import org.apache.commons.lang3.builder.ToStringExclude;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -29,6 +28,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 public class User implements Serializable {
+	private static final long serialVersionUID = -5960401902282412473L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
@@ -52,7 +52,7 @@ public class User implements Serializable {
 	@ToStringExclude
 	@HashCodeExclude
 	private List<Album> albums;
-	
+
 	@JsonIgnore
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
 	@ToStringExclude

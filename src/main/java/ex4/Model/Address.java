@@ -10,6 +10,7 @@ import lombok.Data;
 @Embeddable
 @Data
 public class Address implements Serializable {
+	private static final long serialVersionUID = -1809804829297896763L;
 	private String street;
 	private String suite;
 	private String city;

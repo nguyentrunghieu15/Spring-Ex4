@@ -11,6 +11,7 @@ import ex4.Service.PostService;
 
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 @RestController
 @RequestMapping("/post")
@@ -22,5 +23,9 @@ public class PostController {
 	public List<Post> getAll() {
 		return this.postService.getAllPost();
 	}
-
+	
+	@GetMapping("/{id}")
+	public Post getPostById(@PathVariable("id") Integer postId) {
+	    return postService.getPostById(postId);
+	}
 }

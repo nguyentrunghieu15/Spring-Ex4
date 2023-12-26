@@ -1,7 +1,6 @@
 package ex4.Service;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,4 +16,8 @@ public class PostService {
 	public List<Post> getAllPost() {
 		return this.postRepository.findAll();
 	}
+	
+    public Post getPostById(Integer postId) {
+    	return postRepository.findById(postId).orElse(null);
+    }
 }

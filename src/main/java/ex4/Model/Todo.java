@@ -2,7 +2,6 @@ package ex4.Model;
 
 import java.io.Serializable;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Column;
@@ -21,6 +20,8 @@ import lombok.ToString;
 @Entity
 @Table(name = "todo")
 public class Todo implements Serializable {
+	private static final long serialVersionUID = -8738053805006884239L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;

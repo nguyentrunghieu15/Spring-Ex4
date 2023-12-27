@@ -40,4 +40,4 @@ http://localhost:14567/api/v1/todo : lấy danh sách todo
 ### 3 API được viết bổ sung:  
 http://localhost:14567/api/v1/post/{id} : lấy nội dung của post dựa vào id  
 http://localhost:14567/api/v1/comment/post/{post_id} : lấy danh sách comment của post dựa vào post_id  
-http://localhost:14567/api/v1/photo/album/{album_id} : lấy danh sách photo của album dựa vào album_id
+http://localhost:14567/api/v1/photo/album/ofalbum?albumId =  : lấy danh sách photo của album dựa vào album_id
